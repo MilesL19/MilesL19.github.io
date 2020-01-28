@@ -1,0 +1,82 @@
+body {
+    background: url('images/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: cursive;
+}
+
+#main-page {
+    background: #262523;
+    box-shadow: 20px 10px #D99D55;
+    text-align: center;
+}
+
+#navigation li {
+    list-style-type: none;
+    display:inline-block;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: #C89C76;
+    font-size: 18px;
+    padding-right: 20px;
+    border-radius: 2px solid transparent;
+}
+
+#navigation a:hover {
+    border-bottom: 2px solid #D99D55;
+}
+
+#paragraphs p {
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+#paragraphs-info p {
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: left;
+}
+
+#picOne, #picTwo, #picThree, #picFour {
+    border: 5px solid transparent;
+    vertical-align: middle;
+    width: 420px;
+}
+
+#picOne:hover, #picTwo:hover, #picThree:hover, #picFour:hover {
+    border: 5px double #9C6A61
+}
+
+#table td {
+    color: whitesmoke;
+    border: 3px solid #A64B4B;
+    background-color: black;
+    padding:5px;
+    text-align: left;
+}
+
+#table th {
+    color: black;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+#map li {
+    list-style-type: none;
+    text-align: left;
+}
+
+#map a {
+    text-decoration: none;
+    color: #C89C76;
+    font-size: 18px;
+    padding-right: 20px;
+    border-radius: 2px solid transparent;
+}
+
+#map a:hover {
+    border-bottom: 5px solid black;
+}

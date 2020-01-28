@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('images/Moo1-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#content {
+    background: rgba(255, 255, 255, .6);
+    width: 75%;
+    marigin:auto;
+    padding: 10px;
+    border-radius:5px;
+    box-shadow: 
+    25px /*how far it goes to the right/left*/
+    10px /*how far it goes up and down*/
+    palegoldenrod;
+}
+
+#main-nav li {
+    list-style-type: none;
+    display:inline-block;
+}
+
+/*a{
+    background:green;
+    color:white;
+    text-decoration:none;
+    padding:10px;
+}
+
+a:hover {
+    background: #73404A;
+    color: green;
+}*/
+
+#main-nav a{
+    text-decoration: none;
+    font-size: 20px;
+    padding-right: 5px;
+    color: whitesmoke;
+    border-bottom: 5px solid transparent;
+}
+
+#main-nav a:hover{
+    border-bottom: 2px solid green;
+}
+
+#gay, #pasture {
+    border: 5px solid transparent;
+}
+
+#gay:hover{
+    border: 5px dotted burlywood;
+}
+
+#pasture:hover{
+    border: 5px solid green;
+}
+
+

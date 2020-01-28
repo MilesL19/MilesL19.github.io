@@ -1,0 +1,33 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: url('images/watercolor-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-content {
+    background: rgb(53, 92, 98, 0.3);
+    margin:auto;
+    padding:30px;
+    box-shadow: 25px /*x-axis*/ 10px /*y-axis*/ #E8E7CB;
+}
+
+#assignment-list li {
+    list-style-type: none; 
+}
+
+#assignment-list a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #A3F2FF
+}
+
+#notes-list li {
+    list-style-type: none;
+}
+
+#notes-list a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #A3F2FF
+}

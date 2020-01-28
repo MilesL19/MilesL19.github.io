@@ -1,0 +1,26 @@
+body {
+    background:rgb(194, 236, 236);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    background:linen;
+    padding:40px;
+    width:75%;
+    margin:auto; /* centered horizontally */
+}
+
+h1{
+    color:darkslateblue;
+}
+
+li {
+    list-style-type: none;
+    display:inline-block;
+}
+
+td{
+    border:1px solid mediumaquamarine;
+    background:none;
+    padding:5px;
+}
