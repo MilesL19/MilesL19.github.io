@@ -1,0 +1,57 @@
+img {
+    display:block;
+}
+
+/*Styles for everything*/
+
+*{
+    font-family: monospace;
+    /*margin:0;
+    padding:0;*/
+}
+
+#main-header {
+    background: rgb(255, 169, 226);
+    padding: 10px;
+    color: white;
+}
+
+#main-content {
+    background: ivory;
+    padding: 10px;
+    
+}
+
+#main-footer {
+    background: paleturquoise;
+    padding: 10px;
+}
+
+.collof3 {
+    background: lightcyan;
+    padding: 10px;
+    flex-basis: 30%;
+}
+
+#special-coll {
+    background: rgb(251, 232, 248);
+}
+
+.first-col {
+    background: rgb(144, 251, 251);
+    
+}
+
+.collof3 h2 {
+    color: midnightblue;
+}
+
+#dora-colls {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#main-content h1 {
+    text-align: center;
+}
