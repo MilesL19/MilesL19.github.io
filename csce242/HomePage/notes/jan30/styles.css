@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-header {
+    background:aliceblue;
+
+}
+
+#main-header, .two-cols section, .six-cols section, #main-footer {
+    padding: 10px;
+    margin: 5px;
+}
+
+.two-cols section{
+    background: lightblue;    
+}
+
+.six-cols section{
+    background: paleturquoise;
+}
+
+#main-footer{
+    background: seagreen;
+}
+
+/*Navigation Bar*/
+
+#main-nav li{
+    list-style-type: none;
+    background: beige;
+    padding: 10px 10px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+#main-nav a{
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+/* Text */
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* For larger layouts */
+/* When your screen is at 900px or larger these are the styles that get applied */
+
+@media(min-width:900px) {
+   
+    #main-nav, .two-cols, .six-cols {
+        display: flex;
+    }
+
+    .two-cols section, .six-cols section, #main-nav ul li {
+        flex: 1;
+    }
+}
