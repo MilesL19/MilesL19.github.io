@@ -7,7 +7,7 @@ body {
 
 }
 
-#main-header, .two-cols section, .six-cols section, #main-footer {
+#main-header, .two-cols section, .six-cols section, #main-footer, .four-cols section, .three-cols section {
     padding: 10px;
     margin: 5px;
 }
@@ -36,8 +36,6 @@ body {
 
 #main-nav a{
     text-decoration: none;
-    padding: 10px 0;
-    display: block;
 }
 
 /* Text */
@@ -51,11 +49,11 @@ h1, h2, h3 {
 
 @media(min-width:900px) {
    
-    #main-nav, .two-cols, .six-cols {
+    #main-nav ul, .two-cols, .six-cols, .four-cols, .three-cols {
         display: flex;
     }
 
-    .two-cols section, .six-cols section, #main-nav ul li {
-        flex: 1;
+    .two-cols section, .six-cols section, #main-nav ul li, .four-cols section, .three-cols section {
+        flex: 2;
     }
 }
