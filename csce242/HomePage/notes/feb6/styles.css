@@ -1,0 +1,63 @@
+
+.Example{
+    flex: 1;
+    background: white;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.Example label {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.Example input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+
+.Example h1{
+    text-align: center;
+}
+
+body {
+    background-color: skyblue;
+}
+
+.Example button{
+    width: 100%;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
+.Example input:focus {
+    background: rgb(195, 223, 234);
+    color: blanchedalmond;
+}
+
+@media(min-width:900px) {
+    #content {
+        display:flex;
+    }
+
+    .Example p {
+        display: flex;
+    }
+
+    .Example label {
+        width: 100px;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+    .Example input {
+        width: 50%;
+    }
+
+}
