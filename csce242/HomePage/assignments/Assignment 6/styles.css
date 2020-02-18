@@ -1,0 +1,108 @@
+h1 {
+    text-align: center;
+    background: blanchedalmond;
+}
+
+h2 {
+    text-align: left;
+    font-size: 36px;
+}
+
+#age-order p {
+    display: flex;
+}
+
+#age-order {
+    background: blanchedalmond;
+    margin: 15px 15px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+#age-order label {
+    text-align: left;
+    width: 10%;
+    padding: 5px;
+}
+
+#age-order input {
+    display: block;
+}
+
+#main-nav ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+#main-nav li {
+    background:lightgrey;
+    padding:10px;
+    margin:2px 0;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color:#000;
+}
+
+.hidden {
+    display: none;
+}
+/*#main-nav li {
+    background: lightgray;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#main-nav a {
+   text-decoration: none;
+   color: blanchedalmond;
+   cursor: pointer;
+}*/
+#nav-toggle div {
+    width: 35px;
+    height: 5px;
+    background-color:gray;
+    margin:6px 0;
+}
+
+#thermo button {
+    display: flex;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+
+.grad {
+    width:50px;
+    height:300px;
+    border:1px solid black;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+
+}
+
+@media(min-width:900px) {
+    #nav-toggle {
+        display:none;
+    }
+
+    #main-nav ul {
+        display: flex;
+        background: lightgray;
+        justify-content: space-around;
+    }
+
+    #main-nav li {
+        background:transparent;
+    }
+
+    #main-nav a {
+        border-bottom: 2px solid transparent;
+    }
+
+    #main-nav a:hover {
+        border-bottom: 2px solid white;
+    }
+}
+

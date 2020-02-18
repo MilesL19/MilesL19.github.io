@@ -14,24 +14,48 @@
                 <p>
                     <label for = "txt-first-name">Name: </label>
                     <input id = "txt-first-name">
+                    <span id = "error-name" class = "error hidden">* blank</span>
                 </p>
                 <p>
                     <label for = "txt-fav-color">Fav Color: </label>
                     <input id = "txt-fav-color">
+                    <span id = "error-fav-color" class = "error hidden">* blank</span>
                 </p>
                 <p>
                     <label for = "txt-emotion">Emotion: </label>
                     <input id = "txt-emotion">
+                    <span id = "error-emotion" class = "error hidden">* blank</span>
                 </p>
-                <p id = "paragraph"></p>
 
+
+                <p id = "paragraph"></p>
+                <p class = "emotion" id = "exl-emotion"> </p>
                 <button id = "btn-display">Display</button>
+               
             </section>
             
             <section class = "Example">
                 <h1>Second Example</h1>
+
+                
+                <p>
+                    <label for = "txt-artist">Artist: </label>
+                    <input id = "txt-artist">
+                    <span id = "error-artist" class = "error hidden">* blank</span>
+                </p>
+                <p>
+                    <label for = "txt-song">Song: </label>
+                    <input id = "txt-song">
+                    <span id = "error-song" class = "error hidden">* blank</span>
+                </p>
+        
+                <button id = "btn-display-artist">Display</button>
+                <p id = "artist-paragraph"></p>
+                
             </section>
         </div>
         <script src = "script.js"> </script>
     </body>
 </html>
+
+

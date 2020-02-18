@@ -41,6 +41,35 @@ body {
     color: blanchedalmond;
 }
 
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.blue {
+    color: blue;
+}
+
+.emotion {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.error {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
 @media(min-width:900px) {
     #content {
         display:flex;
@@ -58,6 +87,8 @@ body {
 
     .Example input {
         width: 50%;
+        display: block;
+        margin: auto;
     }
 
 }

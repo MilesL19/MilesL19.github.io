@@ -1,0 +1,187 @@
+html {
+    background: black;
+    font-family: "Berlingske Sans", "Arial", sans-serif;
+}
+
+#top-of-page {
+    color: white;
+    text-align: right;
+    font-size: 8.5px;
+}
+
+#gateway-text {
+    font-weight: bold;
+}
+
+#gateway-nav li, #gateway-text, section {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px
+}
+
+#gateway-nav a {
+    text-decoration: #FFFFFF;
+    color: #FFFFFF;
+    font-weight: none;
+}
+
+#main-nav {
+    background: #73000A;
+    
+}
+
+#main-nav li {
+    list-style-type: none;
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+#main-nav a {
+    text-decoration: #FFFFFF;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#main-nav ul {
+    display: flex;
+
+}
+
+#main-nav a:hover{
+    border-style: solid;
+    border-color: #CC2E40;
+}
+
+#search-bar {
+    float: right;
+    background: black;
+}
+
+#search-bar placeholder, input:focus {
+    color: white;
+}
+
+#motivational {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: right;
+    background:#73000A;
+    background-attachment: fixed;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #73000A;
+}
+
+h2 {
+    color: #73000A;
+}
+
+h3 {
+    color: #FFFFFF;
+    border-bottom: #FFFFFF solid 1px;
+}
+
+#bottom-content-border {
+    background: #FFFFFF;
+    background-attachment: fixed;
+}
+
+#research-section {
+    margin-left: 250px;
+    margin-right: 250px;
+    font-size: 20px;
+}
+
+.cols {
+    display: inline-flex;
+    margin-left: 240px;
+    margin-right: 240px;
+    border-top: solid 1px black;
+}
+
+.cols section {
+    text-align: left;
+    margin: 10px 10px;
+    flex:1;
+}
+
+#final-bottom {
+    background: #73000A;
+    display: flex;
+    color: #FFFFFF;
+}
+
+.three-cols {
+    color: #FFFFFF;
+    flex: 1;
+    margin: 10px 10px; 
+}
+
+.three-cols a {
+    text-decoration: #FFFFFF;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.three-cols li {
+   list-style-type: none;
+}
+
+.two-cols {
+    color: #FFFFFF;
+    margin: 10px 10px; 
+}
+
+.two-cols a {
+    text-decoration: #FFFFFF;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.two-cols li {
+   list-style-type: none;
+}
+
+.one-col {
+    color: #FFFFFF;
+    margin: 10px 10px; 
+}
+
+.one-col a {
+    text-decoration: #FFFFFF;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.one-col li {
+   list-style-type: none;
+}
+
+#bottom-of-page {
+    color: white;
+    text-align: center;
+    font-size: 8.5px;
+    border-top: solid white 1px;
+}
+#copywrite-text {
+    font-weight: bold;
+}
+
+#bottom-nav li, #copywrite-text {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+#bottom-nav a {
+    text-decoration: #FFFFFF;
+    color: #FFFFFF;
+    font-weight: none;
+}
