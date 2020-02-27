@@ -30,11 +30,12 @@ h1 {
     text-align: center;
 }
 
-.grad {
+#grad {
     width:70px;
     height:200px;
     border:1px solid black;
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    --blank: 0%;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) var(--blank), rgba(255,255,255,1) var(--blank), rgba(255,255,255,1) 100%);
     margin-left: 120px;
     margin-top: 10px;
 }
