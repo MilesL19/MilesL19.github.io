@@ -1,0 +1,48 @@
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+}
+
+#Man, #Funds {
+    background: #3399FF;
+    border-radius: 5px;
+
+}
+
+#Man {
+    margin: 50px 50px;
+    padding: 1px 70px;
+}
+
+#Funds {
+    margin: 5px;
+    padding: 20px 70px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 18px
+}
+
+h1 {
+    text-align: center;
+}
+
+.grad {
+    width:70px;
+    height:200px;
+    border:1px solid black;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    margin-left: 120px;
+    margin-top: 10px;
+}
+
+#picture {
+    --dim: 5px;
+    width: 150px;
+    height: 150px;
+    margin-left: var(--dim);
+}
+

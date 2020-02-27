@@ -22,7 +22,6 @@
                 </ul>
             </nav>
         </header>
-        
         <div id="content">
             <section class="example">
                 <h1>First Example</h1>
@@ -47,28 +46,33 @@
                 <p id="ex1-result"></p>
                 <p class="emotion" id="ex1-emotion"></p>
             </section>
-
             <section class="example">
                 <h1>Second Example</h1>
                 <div class="grad"></div>
             </section>
-
-            <section class ="example">
+            <section class="example">
                 <h1>Third Example</h1>
+
                 <p>
                     <label for="txt-start">Start: </label>
                     <input id="txt-start">
-                    <span id="error-start" class="error hidden">* Not a valid number</span>
+                    <span id="error-start" class="error hidden">* Not a valid num</span>
                 </p>
                 <p>
                     <label for="txt-end">End: </label>
                     <input id="txt-end">
-                    <span id="error-end" class="error hidden">* Not a valid number</span>
+                    <span id="error-end" class="error hidden">* Not a valid num</span>
                 </p>
-
-                <button id ="btn-text-display">Display Counting</button>
-
-                <p id = "ex2-result"></p>
+                <button id="btn-go">go!</button>
+            </section>
+            <section class="example">
+                <button id="btn-do-stuff">Do Stuff</button>
+            </section>
+            <section class = "example">
+                <button id = "btn-grow">Grow box</button>
+                <button id = "btn-shrink">Shrink box</button>
+                <div id = "box">
+                </div>
             </section>
         </div>
         <script src="script.js"></script>
