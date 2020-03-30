@@ -1,0 +1,43 @@
+body{
+    background: url('images/brewery.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    background: black;
+    box-shadow: 15px 10px #F8F1DF;
+    color: white;
+}
+
+#smug {
+    height: 50px;
+    width: 50px;
+}
+
+#text-box {
+    height: 500px;    
+    width: 600px;
+}
+
+#main-header {
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.container {
+    margin-left: 900px;
+    transform: rotate(20deg);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 95%;
+    width: 95%;
+    opacity: 0;
+}
+
