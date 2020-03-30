@@ -1,6 +1,6 @@
 let brewery;
 async function Brewery() {
-    let response = await fetch(`https://api.openbrewerydb.org/breweries`);
+    let response = await fetch(`https://milesl19.github.io/csce242/HomePage/json/breweries.json`);
     let breweryJSON = await response.json();
     let breweryDiv = document.getElementById("brewery");
 
@@ -34,7 +34,7 @@ function getBreweryInfo(brewery) {
 
     let liUrl = document.createElement("li");
     let aWeb = document.createElement("a");
-    aWeb.href = "#";
+    aWeb.href = `${brewery.website_url}`;
     liUrl.append(aWeb);
     liUrl.innertext = "Click me for website ;)";
     ulElem.append(liUrl);
