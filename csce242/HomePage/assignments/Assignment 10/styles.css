@@ -1,0 +1,12 @@
+body {
+   background: #333838;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content {
+    background: #3399FF;
+}
+
+h1 {
+    font-weight: normal;
+}
