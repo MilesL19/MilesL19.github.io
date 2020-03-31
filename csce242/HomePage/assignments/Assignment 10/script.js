@@ -1,7 +1,7 @@
 async function showMovies() {
     let response = await fetch(`https://milesl19.github.io/csce242/HomePage/json/movies.json`);
     let moviesJSON = await response.json();
-    let movieDiv = document.createElement("movie-section");
+    let movieDiv = document.getElementById("movie-section");
 
     //Looping to get movies
     for (i in moviesJSON) {
@@ -47,9 +47,9 @@ function getMovieItem(movie) {
     ulElem.append(liDescription);
 
     return movieSection;
-
+}
 
 
     window.onload = function() {
         this.showMovies();
-    }}
+}
