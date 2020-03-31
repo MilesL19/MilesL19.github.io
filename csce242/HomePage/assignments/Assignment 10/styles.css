@@ -1,12 +1,51 @@
 body {
    background: #333838;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   color: #333838;
 }
 
 .content {
     background: #3399FF;
 }
 
+
+
 h1 {
     font-weight: normal;
 }
+
+li {
+    list-style-type: none;
+}
+
+.info ul {
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+
+.info li {
+    margin: 5px 5px;
+}
+
+
+.movie-block {
+   display: flex;
+   background: #2778C7;
+   box-shadow:5px 5px#143C64;
+   margin: 10px 10px;
+   padding: 5px 5px;
+}
+
+.zoom {
+    padding: 5px 5px;
+    background-color: #143C64;
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
