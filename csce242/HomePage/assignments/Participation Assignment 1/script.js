@@ -1,38 +1,31 @@
-let brewery;
+let brewery = [];
+let count = 0;
+let currBrew = document.createElement("div");
+let container = document.createElement("div");
 async function Brewery() {
     let response = await fetch(`https://milesl19.github.io/csce242/HomePage/json/breweries.json`);
     let breweryJSON = await response.json();
-    let breweryDiv = document.getElementById("brewery");
-    let count = 0;
+    let breweryDiv = document.getElementById("brewery-display");
 
     for (i in breweryJSON) {
-        brewery = breweryJSON[i];
+        brewery[i] = breweryJSON[i];
     }
-    
-    //Creating the container for the info to be displayed in
-    let container = document.createElement("div");
 
-    //Creating a brewery object to hold current brewery and image to place info in 
-    let currBrew = document.createElement("section");
+    //Creating and appending text-box image
     container.classList.add("container");
     let image = document.createElement("img");
     image.src = `images/text-box.png`;
     image.style.height = `400px`;
-    image.style.width = `500px`;
-    image.classList.add("container");
+    image.style.width = `500px`; 
     container.append(image);
 
-    
+    //Creating and appending information to text-box image
+    currBrew.append(getBreweryInfo(brewery[0]));
+    currBrew.classList.add("centered");
     container.append(currBrew);
-    currBrew.classList.add("container");
-    currBrew.classList.add("center");
-    currBrew.append(getBreweryInfo(brewery));
-    
-    breweryDiv.append(container);
-    /*while (count != brewery.length) {
-        breweryDiv.append(brewery[count]);
-    }*/
 
+    //appending informaiton to page*/
+    breweryDiv.append(container);
 }
 
 function getBreweryInfo(brewery) {
@@ -59,28 +52,25 @@ function getBreweryInfo(brewery) {
 
     let aWeb = document.createElement("a");
     aWeb.href = brewery.website_url;
-    aWeb.innerText = "Click me for the website ;)";   
+    aWeb.innerText = "Click me for the brewery's website ;)";   
     ulElem.append(aWeb);
 
     return brewSect;
 }
 
-/*function appendDiv(div, brewery) {
-    let container = document.createElement("div");
-    let overlay = document.createElement("div");
 
-    overlay.classList.add("overlay");
-    container.classList.add("container");
-    let image = document.createElement("img");
-    image.src = `images/text-box.png`;
-    container.append(image);
-    overlay.append(getBreweryInfo(brewery));
-    container.append(overlay);
-    div.append(container);
 
-}*/
+function cycle() {
+    count++; 
+    if (count >= 20) {
+        count = 0;
+    }
+    
+    currBrew.replaceChild(getBreweryInfo(brewery[count]), currBrew.childNodes[0]);
+}
 
 window.onload = function() {
     this.Brewery();
-
 }
+
+setInterval(cycle,3000)
