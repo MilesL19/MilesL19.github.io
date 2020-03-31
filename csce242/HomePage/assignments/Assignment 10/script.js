@@ -35,15 +35,15 @@ function getMovieItem(movie) {
     ulElem.append(liActor);
 
     let liYear = document.createElement("li");
-    liYear.innerText = `Years: ${movies.year}`;
+    liYear.innerText = `Years: ${movie.year}`;
     ulElem.append(liYear);
 
     let liGenre = document.createElement("li");
-    liGenre.innerText = `Genres: ${movies.genres}`;
+    liGenre.innerText = `Genres: ${movie.genres}`;
     ulElem.append(liGenre);
 
     let liDescription = document.createElement("li");
-    liDescription.innerText = `${movies.description}`;
+    liDescription.innerText = `${movie.description}`;
     ulElem.append(liDescription);
 
     return movieSection;
