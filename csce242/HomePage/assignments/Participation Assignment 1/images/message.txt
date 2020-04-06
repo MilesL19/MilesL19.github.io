@@ -1,0 +1,96 @@
+{
+  "Venues": [
+    {
+      "name": "venueName",
+      "Theaters": [
+        {
+          "Shows": [
+            {
+              "Movies": [
+                {
+                  "startTime": "timeMovieStarts",
+                  "endTime": "timeMovieEnds",
+                  "name": "movieName",
+                  "description": "movieDescription",
+                  "ageRating": "ageRatingOfMovie",
+                  "userRating": 5.1,
+                  "price": 5.23,
+                  "reviews": [
+                    "This is a bad movie",
+                    "This is a good movie"
+                  ],
+                  "actors": [
+                    "Actor1",
+                    "Actor2"
+                  ],
+                  "producers": [
+                    "Producer1",
+                    "Producer2"
+                  ],
+                  "directors": [
+                    "Director1",
+                    "Director2"
+                  ]
+                }
+              ],
+              "Plays": [
+                {
+                  "startTime": "timePlayStarts",
+                  "endTime": "timePlayEnds",
+                  "name": "playName",
+                  "description": "playDescription",
+                  "ageRating": "ageRatingOfPlay",
+                  "userRating": 5.1,
+                  "price": 5.23,
+                  "reviews": [
+                    "This is a bad play",
+                    "This is a good play"
+                  ],
+                  "actors": [
+                    "Actor1",
+                    "Actor2"
+                  ],
+                  "producers": [
+                    "Producer1",
+                    "Producer2"
+                  ],
+                  "playwrites": [
+                    "Playwrite1",
+                    "Playwrite2"
+                  ]
+                }
+              ],
+              "Concerts": [
+                {
+                  "startTime": "timeConcertStarts",
+                  "endTime": "timeConcertEnds",
+                  "name": "concertName",
+                  "description": "concertDescription",
+                  "ageRating": "ageRatingOfConcert",
+                  "userRating": 5.1,
+                  "price": 5.23,
+                  "reviews": [
+                    "This is a bad concert",
+                    "This is a good concert"
+                  ],
+                  "performers": [
+                    "Performer1",
+                    "Performer2"
+                  ]
+                }
+              ]
+            }
+          ],
+          "Seats": [
+            {
+              "isHandicapable": true,
+              "isReserved": false,
+              "row": "a",
+              "col": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
