@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "styles.css">
+        <script src = "script.js"> </script>
+        <title></title>
+    </head>
+
+    <body>
+        <div class = "content">
+            <h1> :) Big Delicious Cookies :)</h1>
+            
+            <span id = "cookie-id" class = "hidden"></span>
+            
+            <div id="cookies-list"></div>
+
+            <div id="cookie-forms">
+                <div id="cookie-editor" class="cookie-form">
+                    <h2>Cookie Information</h2>
+                    
+                    <p>
+                        <label for="txt-name">Name: </label>
+                        <input id="txt-name">
+                    </p>
+    
+                    <p>
+                        <label for="txt-shape">Shape: </label>
+                        <input id="txt-shape">
+                    </p>
+                    
+                    <p>
+                        <label for="txt-calories">Calories: </label>
+                        <input id="txt-calories">
+                    </p>
+    
+                    <p>
+                        <label for="txt-price">Price: </label>
+                        <input id="txt-price">
+                    </p>
+
+                    <button id="btn-edit-cookie">Re-do Cookie</button>
+                    <button id="btn-delete-cookie">Sell Cookie</button>
+                </div>
+    
+                <div id="add-cookie" class="cookie-form">
+                    <h2>Add a cookie</h2>
+
+                    <p>
+                        <label for="txt-add-name">Name: </label>
+                        <input id="txt-add-name">
+                    </p>
+    
+                    <p>
+                        <label for="txt-add-shape">Shape: </label>
+                        <input id="txt-add-shape">
+                    </p>
+                    
+                    <p>
+                        <label for="txt-add-calories">Calories: </label>
+                        <input id="txt-add-calories">
+                    </p>
+    
+                    <p>
+                        <label for="txt-add-price">Price: </label>
+                        <input id="txt-add-price">
+                    </p>
+
+                    <button id="btn-add-cookie">Bake Cookie</button>
+                </div>
+            </div>
+
+            <div id ="message" class = "hidden">
+                <section id = "result-message"></section>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

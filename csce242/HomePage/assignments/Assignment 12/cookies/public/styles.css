@@ -1,0 +1,59 @@
+body {
+    background: #FDFFE3;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+h1 {
+    text-align: center;
+    background: #C9CAFF;
+    box-shadow:5px 5px papayawhip;
+    border-radius: 24px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    color: gray;
+}
+
+
+#cookies-list {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+#cookie-forms {
+    display: inline-flex;
+}
+
+#message {
+    background: #C9CAFF;
+    box-shadow:5px 5px #FF7EC9;
+    border-radius: 24px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    font-size: x-large;
+ }
+
+.cookie-block {
+    background: #C9CAFF;
+    box-shadow:5px 5px #95F5FF;
+    border-radius: 24px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+ }
+
+ .cookie-form {
+    background: #C9CAFF;
+    box-shadow:5px 5px #AEECB6;
+    border-radius: 10px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+ }
+
+ .hidden {
+    display:none;
+}
+
+button {
+    border-radius: 6px;
+}

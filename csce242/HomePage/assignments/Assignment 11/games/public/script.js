@@ -21,9 +21,8 @@ function getGameItem(game) {
 
     let ulElem = document.createElement("ul");
 
-    let nameEle = document.createElement("li");
-    nameEle.innerText = `Name: ${game.name}`;
-    ulElem.append(nameEle);
+    let aNameEle = document.createElement("a");
+    aNameEle.setAttribute("data-id")
     
     let playersEle = document.createElement("li");
     playersEle.innerText = `\nNumber of players: ${game.players}`;
