@@ -26,10 +26,13 @@ function getCoffeeItem(coffee){
 
     let editButton = document.createElement("button");
     editButton.textContent = "Re-brew";
+    editButton.classList.add("coffee-buttons");
     editButton.onclick = toggleEditForm;
     
     let deleteButton = document.createElement("button");
+    deleteButton.classList.add("coffee-buttons");
     deleteButton.textContent = "Sell";
+    deleteButton.onclick = deleteCoffee;
 
     coffeeSection.append(editButton);
     coffeeSection.append(deleteButton);
@@ -48,6 +51,9 @@ async function showCoffeeDetails() {
 
     let coffee = await response.json();
     let message = document.getElementById("result-message");
+    message.textContent = "";
+    message.classList.remove("hidden");
+
     let div = document.getElementById("message");
     div.classList.remove("hidden");
 
@@ -66,21 +72,38 @@ async function showCoffeeDetails() {
     liCaffeine.innerText = `Caffeine: ${coffee.caffeine}`;
     ulElem.append(liCaffeine);
 
-    let liCondiments = document.createElement("li");
-    liCondiments.innerText = `Add-ons: ${coffee.condiments[0]}, ${coffee.condiments[1]}`;
-    ulElem.append(liCondiments);
     
-    
+
+    document.getElementById("coffee-id").textContent = coffee._id;
+    setTimeout(function() {message.classList.add("hidden")}, 5000);
 }
 
 function toggleAddForm() {
     let form = document.getElementById("add-form");
+    let form2 = document.getElementById("edit-form");
+
+    if (!form2.classList.contains("hidden")) {
+        form2.classList.add("hidden");
+    }
+
     form.classList.remove("hidden");
+
+    let add = document.getElementById("btn-create-coffee");
+    add.onclick = addCoffee;
 }
 
 function toggleEditForm() {
     let form = document.getElementById("edit-form");
+    let form2 = document.getElementById("add-form");
+
+    if (!form2.classList.contains("hidden")) {
+        form2.classList.add("hidden");
+    }
+
     form.classList.remove("hidden");
+
+    let edit = document.getElementById("btn-edit-coffee");
+    edit.onclick = editCoffee;
 }
 
 async function addCoffee() {
@@ -92,15 +115,11 @@ async function addCoffee() {
     let form = document.getElementById("add-form");
     let createBtn = document.getElementById("btn-create-coffee");
 
-    var condiments = ["Whipped Cream", "Milk", "Sugar", "Cinnamon Spice"];
     form.classList.remove("hidden");
 
-    //hide form
-    createBtn.onclick = form.classList.add("hidden");
+    let coffee = {"name":coffeeName, "roast":coffeeRoast, "price":coffeePrice, "caffeine":coffeeCaffeine, "rating":coffeeRating};
 
-    let coffee = {"name":coffeeName, "roast":coffeeRoast, "price":coffeePrice, "caffeine":coffeeCaffeine, "rating":coffeeRating, "condiments:":condiments};
-
-    let response = await fetch('/api/coffee', {
+    let response = await fetch('/api/coffee',{
         method:"POST",
         headers:{
             'Content-Type':'application/json;charset=utf-8',
@@ -115,69 +134,47 @@ async function addCoffee() {
 
     let result = await response.json();
     console.log(result);
-    displayCoffee();
-
-}
-
-window.onload = function() {
-    this.displayCoffee();
-
-    let addBtn = document.getElementById("btn-add");
-    addBtn.onclick = toggleAddForm;
-}
-
-/*
-async function addRecipe() { 
-    let recipeName = document.getElementById("txt-add-name").value;
-    let recipeDescription = document.getElementById("txt-add-description").value;
-
-    let recipe = {"name":recipeName, "description": recipeDescription};
     
-    let response = await fetch('/api/recipes',{
-        method:"POST",
-        headers:{
-            'Content-Type':'application/json;charset=utf-8',
-        },
-        body:JSON.stringify(recipe),
-    });
-
-    if(response.status != 200){
-        console.log("ERROR posting data");
-        return;
-    }
-
-    let result = await response.json();
-    console.log(result);
+    //hide the form
+    createBtn.onclick = form.classList.add("hidden");
     displayCoffee();
 }
 
-async function editRecipe() {
-    let recipeId = document.getElementById("recipe-id").textContent;
-    let recipeName = document.getElementById("txt-name").value;
-    let recipeDescription = document.getElementById("txt-description").value;
-    let recipe = {"name":recipeName, "description": recipeDescription};
+async function editCoffee() {
+    let coffeeId = document.getElementById("coffee-id").textContent;
+    let coffeeName = document.getElementById("txt-edit-name").value;
+    let coffeeRoast = document.getElementById("txt-edit-roast").value;
+    let coffeePrice = document.getElementById("txt-edit-price").value;
+    let coffeeCaffeine = document.getElementById("txt-edit-caffeine").value;
+    let coffeeRating = document.getElementById("txt-edit-rating").value;
+    let editbutton = document.getElementById("btn-edit-coffee");
+    let form = document.getElementById("edit-form");
 
-    let response = await fetch(`/api/recipes/${recipeId}`,{
+    let coffee = {"name":coffeeName, "roast":coffeeRoast, "price":coffeePrice, "caffeine":coffeeCaffeine, "rating":coffeeRating};
+
+    let response = await fetch(`/api/coffee/${coffeeId}`,{
         method:'PUT',
         headers:{
             'Content-Type':'application/json;charset=utf-8',
         },
-        body: JSON.stringify(recipe)
+        body: JSON.stringify(coffee)
     });
 
     if(response.status != 200){
-        console.log("Error updating recipe");
+        console.log("Error updating coffee");
         return;
     }
 
     let result = await response.json();
+
+    editbutton.onclick = form.classList.add("hidden");
     displayCoffee();
 }
 
-async function deleteRecipe() {
-    let recipeId = document.getElementById("recipe-id").textContent;
+async function deleteCoffee() {
+    let coffeeId = document.getElementById("coffee-id").textContent;
 
-    let response = await fetch(`/api/recipes/${recipeId}`, {
+    let response = await fetch(`/api/coffee/${coffeeId}`, {
         method:"DELETE",
         headers: {
             'Content-Type':'application/json;charset=utf-8',
@@ -193,15 +190,10 @@ async function deleteRecipe() {
     displayCoffee();
 }
 
-window.onload = function(){
+window.onload = function() {
     this.displayCoffee();
 
-    let addBtn = document.getElementById("btn-add-recipe");
-    addBtn.onclick = addRecipe;
+    let addBtn = document.getElementById("btn-add");
+    addBtn.onclick = toggleAddForm;
+}
 
-    let editBtn = document.getElementById("btn-edit-recipe");
-    editBtn.onclick = editRecipe;
-
-    let deleteBtn = document.getElementById("btn-delete-recipe");
-    deleteBtn.onclick = deleteRecipe;
-} */

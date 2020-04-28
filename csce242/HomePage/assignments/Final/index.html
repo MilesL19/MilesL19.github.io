@@ -24,8 +24,7 @@
             </nav>
         </header>
        
-        <span id = "cookie-id" class="hidden"></span>
-        
+        <button id = "btn-add"><img src = "images/coffee.png" id = "coffee-pic"> + </button>
         <div id = "coffee-list"></div>
 
         <div id = "forms">
@@ -48,7 +47,7 @@
                 </p>
     
                 <p>
-                    <label for="txt-caffeine">Caffeine Rating:</label>
+                    <label for="txt-caffeine">Caffeine Strength:</label>
                     <input id = "txt-caffeine">
                 </p>
     
@@ -57,12 +56,12 @@
                     <input id = "txt-rating">
                 </p>
     
-                <button id = "btn-create-coffee">Create coffee</button>
+                <button id = "btn-create-coffee" class = "coffee-buttons">Brew coffee</button>
             </div>
     
             <div id = "edit-form" class = "form hidden">
                 <h2>Change Coffee Information</h2>
-                
+                 <span id = "coffee-id" class="hidden"></span>
                 <p>
                     <label for="txt-edit-name">Coffee Name:</label>
                     <input id = "txt-edit-name">
@@ -79,7 +78,7 @@
                 </p>
     
                 <p>
-                    <label for="txt-edit-caffeine">Caffeine Rating:</label>
+                    <label for="txt-edit-caffeine">Caffeine Strength:</label>
                     <input id = "txt-edit-caffeine">
                 </p>
     
@@ -88,15 +87,15 @@
                     <input id = "txt-edit-rating">
                 </p>
     
-                <button id = "btn-edit-coffee">Create coffee</button>
+                <button id = "btn-edit-coffee" class = "coffee-buttons">Re-brew coffee</button>
             </div>
         </div>
 
-        <div id ="message" class = "hidden">
-            <section id = "result-message"></section>
+        <div id ="message" >
+            <section id = "result-message"class = "hidden"></section>
         </div>
 
-        <button id = "btn-add">+</button>
+        
 
 
     </body>

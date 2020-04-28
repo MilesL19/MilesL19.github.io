@@ -14,9 +14,8 @@ const coffeeSchema = new mongoose.Schema({
     roast:String,
     price:Number,
     caffeine:String,
-    rating:Number,
-    condiments:[String]
-})
+    rating:Number
+});
 
 const Coffee = mongoose.model('Coffee',coffeeSchema);
 
@@ -44,7 +43,7 @@ async function getCoffee(id,res) {
     res.send(coffee);
 }
 
-app.post('/api/coffee', (req,res) => {
+app.post('/api/coffee', (req,res)=>{
     const result = validateCoffee(req.body);
 
     if(result.error){
@@ -57,11 +56,25 @@ app.post('/api/coffee', (req,res) => {
         roast:req.body.roast,
         price:req.body.price,
         caffeine:req.body.caffeine,
-        rating:req.body.rating,
-        condiments:req.body.condiments
+        rating:req.body.rating
     });
 
     createCoffee(coffee,res);
+});
+
+app.put('/api/coffee/:id',(req,res)=>{
+    const result = validateCoffee(req.body);
+
+    if (result.error) {
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    updateCoffee(res, req.params.id, req.body.name, req.body.roast, req.body.price, req.body.caffeine, req.body.rating);
+})
+
+app.delete('/api/coffee/:id', (req,res) => {
+    removeCoffee(res, req.params.id);
 });
 
 async function createCoffee(coffee,res) {
@@ -70,12 +83,31 @@ async function createCoffee(coffee,res) {
     res.send(coffee);
 }
 
+async function updateCoffee(res, id, name, roast, price, caffeine, rating) {
+    const result = await Coffee.updateOne({_id:id}, {
+        $set: {
+            name:name,
+            roast:roast,
+            price:price,
+            caffeine:caffeine,
+            rating:rating
+        }
+    })
+
+    res.send(result);
+};
+
+async function removeCoffee(res,id) {
+    const coffee = await Coffee.findByIdAndRemove(id);
+    res.send(coffee);
+}
+
 function validateCoffee(coffee) {
     const schema = {
         name:Joi.string().min(3).required(),
         roast:Joi.string().min(4).required(),
-        price:1,
-        caffeine:Joi.string().min(1).max(5),
+        price:Joi.number().min(1),
+        caffeine:Joi.string().min(1).max(6),
         rating:Joi.number().min(1).max(5)
     };
 
